@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fiktive ARMEDANGELS-Uni-Kampagne: Wir wählen die Zukunft.">
+  <title>ARMEDANGELS Uni-Kampagne | Wir wählen die Zukunft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Zur Startsektion">ARMEDANGELS</a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#kampagne">Kampagne</a>
+      <a href="#umfrage">Umfrage</a>
+      <a href="#store">Store</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="kampagne" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Fiktive Uni-Kampagne</p>
+        <h1 id="hero-title">WIR WÄHLEN DIE ZUKUNFT.</h1>
+        <p class="hero-question">WAS WÄHLST DU FÜR DEIN MORGEN?</p>
+        <p class="hero-subtitle">Welche Entscheidung möchtest du für dein zukünftiges Ich treffen?</p>
+        <a class="text-link" href="#umfrage">Zur Umfrage</a>
+      </div>
+      <div class="editorial-visual" aria-hidden="true">
+        <img class="hero-image" src="themindinraw-bee-4459631_1920.jpg" alt="">
+        <div class="visual-note">LESS, BUT BETTER</div>
+      </div>
+    </section>
+
+    <section class="form-section" id="umfrage" aria-labelledby="form-title">
+      <div class="section-intro">
+        <p class="eyebrow">Future letter</p>
+        <h2 id="form-title">Eine Entscheidung. Ein Brief. Ein Jahr.</h2>
+      </div>
+
+      <div class="form-shell">
+        <ol class="stepper" aria-label="Fortschritt">
+          <li class="step active" data-step-indicator="1">
+            <span>1</span>
+            <strong>Umfrage</strong>
+          </li>
+          <li class="step" data-step-indicator="2">
+            <span>2</span>
+            <strong>E-Mail</strong>
+          </li>
+          <li class="step" data-step-indicator="3">
+            <span>3</span>
+            <strong>Brief</strong>
+          </li>
+          <li class="step" data-step-indicator="4">
+            <span>4</span>
+            <strong>Fertig</strong>
+          </li>
+        </ol>
+
+        <form id="future-form" novalidate>
+          <fieldset class="form-step active" data-step="1">
+            <legend>Welche Entscheidung möchtest du für dein zukünftiges Ich treffen?</legend>
+            <p class="form-hint">Mehrfachauswahl möglich.</p>
+
+            <div class="choice-grid" data-choice-group>
+              <label class="choice">
+                <input type="checkbox" name="choices" value="weniger impulsiv kaufen">
+                <span>weniger impulsiv kaufen</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="choices" value="Kleidung länger tragen">
+                <span>Kleidung länger tragen</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="choices" value="mehr auf Qualität achten">
+                <span>mehr auf Qualität achten</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="choices" value="bewusster auswählen">
+                <span>bewusster auswählen</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="choices" value="weniger, aber besser kaufen">
+                <span>weniger, aber besser kaufen</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="choices" value="Eigene Antwort" id="custom-choice">
+                <span>eigene Antwort</span>
+              </label>
+            </div>
+
+            <label class="field custom-answer" for="custom-answer">
+              <span>Deine eigene Antwort</span>
+              <input type="text" id="custom-answer" name="customAnswer" placeholder="Ich wähle ...">
+            </label>
+
+            <p class="error-message" data-error-for="survey" aria-live="polite"></p>
+            <button class="button" type="button" data-next>Weiter</button>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="2">
+            <legend>Bleib mit deinem zukünftigen Ich verbunden.</legend>
+            <p class="form-copy">Wir schicken dir deine Antwort und deinen Zukunftsbrief in einem Jahr zurück. Gleichzeitig kannst du Updates zur Kampagne und zum Newsletter erhalten.</p>
+
+            <div class="field-row">
+              <label class="field" for="email">
+                <span>E-Mail-Adresse</span>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="du@example.com">
+              </label>
+              <label class="field" for="email-confirm">
+                <span>E-Mail-Adresse bestätigen</span>
+                <input type="email" id="email-confirm" name="emailConfirm" autocomplete="email" placeholder="du@example.com">
+              </label>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" id="consent" name="consent">
+              <span>Ich bin damit einverstanden, dass meine E-Mail-Adresse für den Versand meines Zukunftsbriefs und für Kampagnen-Updates gespeichert wird.</span>
+            </label>
+
+            <p class="error-message" data-error-for="email" aria-live="polite"></p>
+            <div class="button-row">
+              <button class="secondary-button" type="button" data-prev>Zurück</button>
+              <button class="button" type="button" data-next>Weiter zum Zukunftsbrief</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="3">
+            <legend>Schreib deinem zukünftigen Ich.</legend>
+            <p class="form-copy">Was möchtest du dir in einem Jahr selbst sagen?</p>
+
+            <label class="field" for="letter">
+              <span>Zukunftsbrief</span>
+              <textarea id="letter" name="letter" rows="9" placeholder="Liebes zukünftiges Ich, heute wähle ich ..."></textarea>
+            </label>
+
+            <p class="error-message" data-error-for="letter" aria-live="polite"></p>
+            <div class="button-row">
+              <button class="secondary-button" type="button" data-prev>Zurück</button>
+              <button class="button" type="submit">Brief abschicken</button>
+            </div>
+          </fieldset>
+        </form>
+
+        <section class="thank-you form-step" data-step="4" aria-labelledby="thanks-title" tabindex="-1">
+          <p class="eyebrow">Gespeichert als Demo</p>
+          <h2 id="thanks-title">Dein Brief ist unterwegs in die Zukunft.</h2>
+          <p>Danke, dass du deine Entscheidung geteilt hast. In einem echten Kampagnensetup würdest du deinen Brief in einem Jahr per E-Mail zurückerhalten.</p>
+
+          <div class="summary" aria-label="Zusammenfassung">
+            <div>
+              <span>Ausgewählte Antworten</span>
+              <p id="summary-choices"></p>
+            </div>
+            <div>
+              <span>E-Mail-Adresse</span>
+              <p id="summary-email"></p>
+            </div>
+            <div>
+              <span>Brieftext</span>
+              <p id="summary-letter"></p>
+            </div>
+          </div>
+
+          <button class="button" type="button" id="reset-form">Zurück zum Start</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="store-note" id="store" aria-label="Store Hinweis">
+      <p>STORE</p>
+      <span>Diese Demo nutzt keine echten Shopdaten und keine originalen Markenassets.</span>
+    </section>
+  </main>
+
+  <footer class="footer" id="newsletter">
+    <span>ARMEDANGELS Uni-Kampagne</span>
+    <a href="#top">Zurück nach oben</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
